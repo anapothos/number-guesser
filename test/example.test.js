@@ -12,8 +12,6 @@ test('should return 0 because numbers are equal', function(assert) {
     //Act 
     // Call the function you're testing and set the result to a const
     const result = compareNumbers (guess, correctNumber);
-
-
     //Assert
     // Make assertions about what is expected valid result
     assert.equal(result, 0);

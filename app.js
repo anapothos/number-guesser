@@ -1,18 +1,25 @@
-import { compareNumbers } from './test/compare-numbers';
+import { compareNumbers } from './test/compare-numbers.js';
 
+const getRandomNumber = () => {
+    return Math.ceil(Math.random() * 20);
+}
 //iniliaze dom elements
 
 const goButton = document.getElementById ('button');
-const amountLevel = document.getElementById ('amount');
-let highLow = document.getElementById ('level')
-let successLevel = document.getElementById ('success')
+let numberOfTriesDisplay = document.getElementById('tries');
+const highLow = document.getElementById ('level')
+const successLevel = document.getElementById ('success')
 
-const amount = 4; 
+const targetNumber = getRandomNumber(); 
+//Initialize State
+let numberOfTries = 4;
+numberOfTriesDisplay.textContent = numberOfTries;
 
 goButton.addEventListener ('click', () => {
     
     
-    amountLevel.textContent = amount;
-    successLevel = 
+    numberOfTriesDisplay.textContent = numberOfTries;
+    //successLevel =
     
 });
+
