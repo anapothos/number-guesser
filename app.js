@@ -1,4 +1,4 @@
-import { compareNumbers } from './test/compare-numbers';
+import { compareNumbers } from './compare-numbers';
 
 //iniliaze dom elements
 

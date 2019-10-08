@@ -10,15 +10,24 @@
 </head>
 
 <body>
-    <h3>u wanna play a game?</h3>
-    <p>games are what make the world go 'round.</p>
-    <input type="number">
-    <button id="button">GO</button>
-    <p>Number of Tries Remaining</p>
-    <div>Tries:<span id="amount"></span></div>
-    <div>2 high or 2 low?:<span id="level"></span></div>
-    <div>winner or loser?:<span id="success"></span></div>
-    
+    <div id="intro">
+        <h3>u wanna play a game?</h3>
+        <p>games are what make the world go 'round.</p>
+        <p id = 'rule-list'>
+            <h3>rulez</h3>
+            Let's go over some ground rules. The objective of this game is to guess the hidden number in 4 or less tries. Reflect on your most recent tarot reading and consult a fortune cookie, cause it's time to select a number to input into the field. This lovely program will inform you if your guess was too high or too low. When you inevitably experience failure, please try again! 
+        </p>
+    </div>
+    <div id="input">
+        <input type="number">
+        <button id="button">GO</button>
+   </div>
+   <div id="results">
+         <div>Number of Tries Remaining:<span id="amount"></span></div>
+         <!-- should change the above ID to something reflecting # of remaming tries-->
+         <div>2 high or 2 low?:<span id="level"></span></div>   
+         <div>winner or loser?:<span id="success"></span></div>
+    </div>
 
     <script src="app.js"></script>
 </body>
