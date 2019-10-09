@@ -19,17 +19,19 @@
         </p>
     </div>
     <div id="input">
-        <input type="number">
+        <input id="guess-input-field" type="number">
         <button id="guessbutton">GO</button>
    </div>
-   <div id="results">
+   <div id="output">
          <div>Number of Tries Remaining:<span id="tries-remaining"></span></div>
-         <div>2 high or 2 low?:<span id="high-low"></span></div>   
-         <div>winner or loser?:<span id="win-lose"></span></div>
+         <div>Results: <span id="results"></span></div>   
+         <div><span id="win-lose"></span></div>
 
     </div>
 
+    
     <script type="module" src="app.js"></script>
+    <script type="module" src="compare-numbers.js"></script>
 </body>
 
 </html>
