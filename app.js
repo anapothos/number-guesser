@@ -1,18 +1,26 @@
-import { compareNumbers } from './compare-numbers';
+import { compareNumbers } from './compare-numbers.js';
 
 //iniliaze dom elements
 
-const goButton = document.getElementById ('button');
-const amountLevel = document.getElementById ('amount');
-let highLow = document.getElementById ('level')
-let successLevel = document.getElementById ('success')
 
-const amount = 4; 
+const numberOfTriesLeft = document.getElementById ('tries-remaining');
+const highOrLow = document.getElementById ('high-low');
+const guessButton = document.getElementById ('guessbutton');
+const userResults = document.getElementById ('win-lose');
+
+//set initial state
+const targetNumber = 4; 
 
 goButton.addEventListener ('click', () => {
-    
-    
-    amountLevel.textContent = amount;
-    successLevel = 
+    let userGuess = Number(userInput.value);
+    let comparisonResult = compareNumbers(userGuess, targetNumber);
+    guessingGame(comparisonResult);
     
 });
+
+
+const guessingGame = comparisonResult => {
+    if (comparisonResult < 0) {
+        update;
+    }
+};
