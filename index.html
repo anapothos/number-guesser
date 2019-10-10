@@ -6,12 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>GAME TIME</title>
 </head>
 
 <body>
+    <div id="intro">
+        <h3>u wanna play a game?</h3>
+        <p>games are what make the world go 'round.</p>
+        <p id = 'rule-list'>
+            <h3>rulez</h3>
+            Let's go over some ground rules. The objective of this game is to guess the hidden number in 4 or less tries. Reflect on your most recent tarot reading and consult a fortune cookie, cause it's time to select a number to input into the field. This lovely program will inform you if your guess was too high or too low. When you inevitably experience failure, please try again! 
+        </p>
+    </div>
+    <div id="input">
+        <input id="guess-input-field" type="number">
+        <button id="guessbutton">GO</button>
+   </div>
+   <div id="output">
+         <div>Win or Lose: <span id="win-lose"></span></div>
+         <div>Hot or Cold: <span id="results"></span></div>   
+         <div><span id="tries-remaining"></span></div>
 
-    <script src="app.js"></script>
+    </div>
+
+    
+    <script type="module" src="app.js"></script>
+    <script type="module" src="compare-numbers.js"></script>
 </body>
 
 </html>
