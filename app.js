@@ -9,30 +9,30 @@ const userResults = document.getElementById ('win-lose');
 const previousGuessField = document.getElementById ('results');
 
 //set initial state
-const correctNumber = Math.floor(4); 
+const correctNumber = Math.floor(11); 
 let numberOfTries = 4;
 
-userResults.textContent = `Tries Remaining: ${numberOfTries}`;
+numberOfTriesRemaining.textContent = `Tries Remaining: ${numberOfTries}`;
 
 guessButton.addEventListener ('click', () => {
-    let userGuess = Number(userInput.value);
-    updatePreviousGuess(userGuess);
-    let comparisonResult = compareNumbers(userGuess, correctNumber);
+    let guess = Number(userInput.value);
+    updatePreviousGuess(guess);
+    let comparisonResult = compareNumbers(guess, correctNumber);
     guessingGame(comparisonResult);
 });
 
-const updatePreviousGuess = userGuess => {
-    previousGuessField.textContent = `Your guess was ${userGuess}`;
+const updatePreviousGuess = guess => {
+    previousGuessField.textContent = `You Guessed: ${guess}`;
 };
 
 const guessingGame = comparisonResult => {
-    if (comparisonResult < correctNumber) {
+    if (comparisonResult < 1) {
         updateLives();
         updateTooLow();
-    } else if (comparisonResult > correctNumber) {
+    } else if (comparisonResult > -1) {
         updateLives(); 
         updateTooHigh();
-    } else if (comparisonResult === correctNumber) {
+    } else if (comparisonResult === 0) {
         winner();
     
     } else if (numberOfTries === 0) {
@@ -41,16 +41,16 @@ const guessingGame = comparisonResult => {
 };
 
 const updateLives = () => {
-    numberOfTries;
-    previousGuessField.textContent = `Guesses Remaining: ${numberOfTriesRemaining}`;
-}; 
+    numberOfTries--;
+    previousGuessField.textContent = numberOfTries;
+};
 
 const updateTooLow = () => {
     previousGuessField.textContent = 'Guess was 2 low';
 };
 
 const updateTooHigh = () => {
-    userResults.textContent = 'Guess was 2 high';
+    previousGuessField.textContent = 'Guess was 2 high';
 };
 
 const loser = () => { 
